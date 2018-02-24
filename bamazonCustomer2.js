@@ -6,16 +6,18 @@ var fs = require("fs");
 
 var mysql = require("mysql");
 
+var keys = require('./keys.js');
+
 // Create the connection information for the sql database
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
 
   // Your username
-  user: "root",
+  user: keys.mysql.user,
 
   // Your password
-  password: "root",
+  password: keys.mysql.password,
   database: "Bamazon_DB"
 });
 
