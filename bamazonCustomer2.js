@@ -66,13 +66,10 @@ function postCategories() {
             }
             return choiceArray;
          },
-         message: "What would you like to buy?"
-        },
+         message: "Which item are you interested in?"
+          },
        ])
       });
     }
-    
-
-    
  
       
