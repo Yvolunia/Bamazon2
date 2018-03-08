@@ -12,3 +12,5 @@ App will show the total cost of the purchase.
 
 Product quantity in database will be updated when orders are fulfilled.
 
+
+
