@@ -33,16 +33,5 @@ VALUES ("HP Laptop", "computers", 697.00, 8);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Brother Laser Printer", "computers", 169.05, 12);
 
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("aspirin", "health_beauty", 8.50, 45);
-
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("bubble bath", "health_beauty", 3.75, 20);
-
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("tissues", "health_beauty", 4.20, 30);
-
-INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("rose candle", "health_beauty", 15.22, 30);
 
 
