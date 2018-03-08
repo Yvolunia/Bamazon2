@@ -39,7 +39,7 @@ function start() {
       choices: ["YES", "NO"]
     })
     .then(function(answer) {
-      // based on their answer, either call the bid or the post functions
+      // based on their answer, either show categories or end program
       if (answer.welcome.toUpperCase() === "YES") {
         postCategories();
       }
@@ -50,12 +50,29 @@ function start() {
 }
 
 function postCategories() {
-  connection.query("SELECT department_name FROM products", function(err, res) {
+     // query the database for all categories
+  connection.query("SELECT * FROM products", function(err, results) {
     if (err) throw err;
+// once you have the items, prompt the user to choose a category
+ inquirer
+      .prompt([
+        {
+          name: "choice",
+          type: "rawlist",
+          choices: function() {
+            var choiceArray = [];
+            for (var i = 0; i < results.length; i++) {
+              choiceArray.push(results[i].product_name);
+            }
+            return choiceArray;
+         },
+         message: "What would you like to buy?"
+        },
+       ])
+      });
+    }
+    
 
-    // Log all results of the SELECT statement
-    console.log(res);
-    connection.end();
-  });
-}
-
+    
+ 
+      
