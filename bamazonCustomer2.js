@@ -62,14 +62,20 @@ function postCategories() {
           choices: function() {
             var choiceArray = [];
             for (var i = 0; i < results.length; i++) {
-              choiceArray.push(results[i].product_name);
+              choiceArray.push(results[i].product_name  + ": $" + results[i].item_price);
             }
             return choiceArray;
          },
          message: "Which item are you interested in?"
-          },
-       ])
-      });
+            },
+            {
+            name: "quantity",
+            type: "input",
+            message: "How many?"
+            },
+          ])
+       });
     }
+    
  
-      
+    
